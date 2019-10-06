@@ -11,6 +11,9 @@ export default function Login({ navigation }) {
 
     // realizar uma acao ao abrir a tela
     useEffect(() => {
+        //Add apenas para ficar no login.
+        //AsyncStorage.setItem('user','');
+        
         AsyncStorage.getItem('user').then(user => {
             if(user) {
                 navigation.navigate('List');
@@ -58,7 +61,7 @@ export default function Login({ navigation }) {
             />
 
             <TouchableOpacity onPress={handleSubmit} style={styles.button}>
-                <Text styles={styles.buttonText}>Encontrar spots</Text>
+                <Text style={styles.buttonText}>Encontrar spots</Text>
             </TouchableOpacity>
         </View>
     </KeyboardAvoidingView>
